@@ -91,7 +91,7 @@ def seperable_conv(tensor1,tensor2):
 def depthwise_seperable_conv(tensor1,tensor2,tensor3):
 	w1,h1,d1=tensor1.shape
 	w2,h2,d2=tensor2.shape
-	arr_1=[]
+	arr_1=[]s
 	for i in range(d1):
 		arr_1.append(conv2d(tensor1[:,:,i],tensor2[:,:,i]))
 	intermediate_mat=np.stack(arr_1,axis=2)
